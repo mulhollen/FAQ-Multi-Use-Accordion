@@ -1,0 +1,262 @@
+$tablet-max-width: 1000px;
+$mobile-max-width: 740px;
+
+.contentPage {
+    width: 100%;
+    background-color: #FFFFFF;
+    padding-bottom: 2rem;
+    animation: fadein 1s 1;
+
+    h1 {
+        color: #FFFFFF;
+        font-size: 48px;
+        line-height: 59px;
+        text-align: center;
+        font-weight: normal;
+    }
+
+    h6 {
+        color: #FFFFFF;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+    }
+
+    &__headingDiv {
+        padding: 66px 0 48px 0;
+        max-width: 618px;
+        margin: 0 auto;
+
+        @media (max-width: $mobile-max-width) {
+            width: 90%;
+        }
+    }
+
+    .accordion {
+        border: none;
+    }
+
+    &__faqAccordion {
+        border-radius: 5px;
+        background-color: #FFFFFF;
+        box-shadow: 0 6px 10px 0 rgba(0,0,0,0.16), 0 1px 12px 0 rgba(0,0,0,0.18), 0 3px 5px 0 rgba(0,0,0,0.2);
+        padding: 1.5rem 2rem;
+        margin: 0 auto;
+        width: 764px;
+
+        @media (max-width: 900px) {
+            width: 700px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 650px) {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+
+    &__faqAccordion {
+
+        .accordion .accordion-item {
+            border-bottom: 1px solid #DEE2E6;
+
+            &:last-of-type {
+                border-bottom: none;
+            }
+        }
+
+
+        .accordion .accordion-item .title {
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #363639;
+            font-weight: 600;
+            font-size: 1rem;
+            margin: 1.5rem 0;
+            padding: 0;
+            border: none;
+
+
+            &:hover {
+                background: #fff;
+                border: none;
+            }
+
+            &:focus {
+                color: #363639;
+                background-color: #fff;
+                border-color: #fff;
+                border: none;
+                box-shadow: none;
+                outline: 0;
+            }
+
+            &:after {
+                transform: rotate(-90deg);
+                content: url("./angle-down-solid.svg");
+                height: 12px;
+                width: 12px;
+                font-size: unset;
+                flex-shrink: 0;
+                margin-left: 0;
+                -moz-transition: all .25s linear;
+                -webkit-transition: all .25s linear;
+                transition: all .25s linear;
+            }
+        }
+
+        .accordion .accordion-item.active .title:after {
+            transform: rotate(0deg);
+            -moz-transition: all .25s linear;
+            -webkit-transition: all .25s linear;
+            transition: all .25s linear;
+        }
+
+        .panel p {
+            margin: 0 0 1.5rem 0;
+            max-width: 675px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .card {
+            border: none;
+            height: unset;
+            margin-bottom: 1.5rem;
+
+            &-body {
+                padding: 0;
+                color: #363639;
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+    }
+
+}
+.faqSplashHolder {
+    width: 100%;
+    background: #fff;
+
+    .faqSplash {
+        max-width: 1056px;
+        display: flex;
+        justify-content: flex-start;
+        padding: 48px 0 100px 0;
+        margin: 0 auto;
+
+        @media (max-width: 1100px) {
+            max-width: 98%;
+        }
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+
+        @media (max-width: 450px) {
+            padding: 48px 0 48px 0;
+        }
+
+        > div:first-of-type {
+            margin-right: 48px;
+            min-width: 48%;
+
+            @media (max-width: 1100px) {
+                margin-right: 1rem;
+                padding-left: 1rem;
+                max-width: 50%;
+            }
+
+            @media (max-width: 768px) {
+                max-width: 100%;
+            }
+
+            h2 {
+                color: #363639;
+                font-size: 32px;
+                line-height: 39px;
+                font-weight: lighter;
+                margin-bottom: 1.5rem;
+            }
+
+            p {
+                color: #363639;
+                font-size: 16px;
+                line-height: 22px;
+                margin-bottom: 1rem;
+            }
+
+            > div {
+                background-color: #1D5D7D;
+                border-radius: 4px;
+                height: 34px;
+                width: 150px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                a {
+                    color: #FFFFFF;
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 19px;
+                    text-align: center;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        > p {
+            min-width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        > div:last-of-type {
+            padding: 0;
+            width: unset;
+            min-width: 50%;
+            border-radius: 0;
+            background-color: #FFFFFF;
+            box-shadow: none;
+            margin: -20px auto 0 auto;
+
+            @media (max-width: 1100px) {
+                padding-right: 1rem;
+            }
+
+            @media (max-width: 768px) {
+                margin: 1rem 1rem 0 1rem;
+                padding-right: 0;
+            }
+
+            > div {
+                border: none;
+            }
+        }
+    }
+}
+
+// restyling reactstrap
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle  {
+    color: #363639;
+    background-color: #fff;
+    border: none;
+    box-shadow: none;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active:focus,
+.btn-secondary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-secondary.dropdown-toggle:focus {
+    box-shadow: none;
+}
