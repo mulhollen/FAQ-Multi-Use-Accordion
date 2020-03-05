@@ -2,6 +2,11 @@
 
 Multi-use Accordion uses [react-light-accordion](https://www.npmjs.com/package/react-light-accordion) to create a reusable FAQ component with two built in use cases: Full FAQ Page View and a FAQ Splash View for use on other pages. 
 
+![full screen FAQ Mutli-use Accordion View](./src/full.png)
+
+
+![splash FAQ Mutli-use Accordion View](./src/splash.png)
+
 ## Installation
 
 FAQ Multi-use Accordion is a React component requiring 
